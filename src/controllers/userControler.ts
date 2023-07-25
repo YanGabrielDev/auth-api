@@ -23,7 +23,7 @@ export class UserController{
     const token = jwt.sign(req.body, random(),{
       expiresIn: '1 days'
     })
-    console.log(jwt.decode(token))
+
     res.status(200).send({access_token: token})
   }
 }
